@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ACLC
+build_property.ProjectDir = C:\MauiProyects\ACLC\
+
+[C:/MauiProyects/ACLC/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/MauiProyects/ACLC/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/MauiProyects/ACLC/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/MauiProyects/ACLC/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/MauiProyects/ACLC/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/MauiProyects/ACLC/Views/EleccionReserva.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.EleccionReserva.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EleccionReserva.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EleccionReserva.xaml
+
+[C:/MauiProyects/ACLC/Views/InicioSesion.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.InicioSesion.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\InicioSesion.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\InicioSesion.xaml
+
+[C:/MauiProyects/ACLC/Views/ModalCarga.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.ModalCarga.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ModalCarga.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ModalCarga.xaml
+
+[C:/MauiProyects/ACLC/Views/RegistroQR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.RegistroQR.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegistroQR.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegistroQR.xaml
+
+[C:/MauiProyects/ACLC/Views/VisualizacionReservas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.VisualizacionReservas.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\VisualizacionReservas.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\VisualizacionReservas.xaml

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ACLC.Views.InicioSesion">
+
+    <ScrollView BackgroundColor="#000000">
+        <VerticalStackLayout
+            Spacing="0"
+            Padding="50,100"
+            VerticalOptions="Center"
+            BackgroundColor="#82014A">
+
+
+            <Border  
+                StrokeShape="RoundRectangle 10,10,10,10"
+                Background="#E2E2E2"
+                HorizontalOptions="Center">
+
+                <Grid 
+                ColumnDefinitions="400"
+                RowDefinitions="30,40,30,40,50"
+                BackgroundColor="#E2E2E2"
+                MinimumWidthRequest="500"
+                MaximumHeightRequest="374"
+                HorizontalOptions="Center"
+                Margin="0"
+                Padding="55,55,55,10">
+
+                    <Label HorizontalOptions="Center" Text="Boleta" Grid.Column="0" Grid.Row="0" TextColor="Black"/>
+
+                    <Border  Grid.Column="0" Grid.Row="1" StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry HorizontalTextAlignment="Center" BackgroundColor="White"/>
+                    </Border>
+
+
+                    <Label HorizontalOptions="Center" Text="Contraseña" Grid.Column="0" Grid.Row="2" TextColor="Black"/>
+
+                    <Border  Grid.Column="0" Grid.Row="3" StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry HorizontalTextAlignment="Center" BackgroundColor="White" IsPassword="True"/>
+                    </Border>
+
+                    <Button  Clicked="OnButtonClicked" Text="Ingresar" Grid.Column="0" Grid.Row="4" BackgroundColor="#545454" TextColor="White" HorizontalOptions="Center" Margin="0, 10, 0, 0"  FontAttributes="Bold"/>
+                </Grid>
+
+            </Border>
+
+
+            <Image Source="ipnlogo.jpg" WidthRequest="110" HeightRequest="110" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -310, 0, 0">
+                <Image.Clip>
+                    <EllipseGeometry Center="55, 55" RadiusX="55" RadiusY="55" />
+                </Image.Clip>
+            </Image>
+            <Label  Margin="0, 220, 0, 0"
+                    Text="Registrarse&#10; Click aquí"
+                    TextColor="#e2e2e2"
+                    
+                    HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

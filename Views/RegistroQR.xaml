@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="ACLC.Views.RegistroQR">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Label x:Name="info" FontSize="20"/>
+            <Label x:Name="NombreLabel" FontSize="20"/>
+            <Label x:Name="BoletaLabe" FontSize="20"/>
+            <Label x:Name="EscuelaLabel" FontSize="20"/>
+            <Label x:Name="VigenciaLabel" FontSize="20"/>
+
+                <cv:CameraView x:Name="CameraView" WidthRequest="300"
+                           HeightRequest="300" CamerasLoaded="CameraView_OnCamerasLoaded"
+                           BarCodeDetectionEnabled="True" 
+                           BarcodeDetected="CameraView_OnBarcodeDetected">
+
+            </cv:CameraView>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
