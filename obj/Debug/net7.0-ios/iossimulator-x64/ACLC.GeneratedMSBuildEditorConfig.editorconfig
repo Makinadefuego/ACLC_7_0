@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.InicioSesion.xa
 build_metadata.AdditionalFiles.TargetPath = Views\InicioSesion.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\InicioSesion.xaml
 
+[C:/MauiProyects/ACLC/Views/MisResevas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.MisResevas.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MisResevas.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MisResevas.xaml
+
 [C:/MauiProyects/ACLC/Views/ModalCarga.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.ModalCarga.xaml
@@ -63,6 +69,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.RegistroQR.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RegistroQR.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RegistroQR.xaml
+
+[C:/MauiProyects/ACLC/Views/ValidacionBoleta.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ACLC.Views.ValidacionBoleta.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ValidacionBoleta.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ValidacionBoleta.xaml
 
 [C:/MauiProyects/ACLC/Views/VisualizacionReservas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

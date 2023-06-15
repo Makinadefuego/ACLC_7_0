@@ -11,10 +11,12 @@ public partial class VisualizacionReservas : ContentPage
     private readonly Laboratorio _labseleccionado;
     private readonly List<DatosBoton> _listaBotones = new();
     private List<Reservacion> _reservacionesSemana = new();
+    private Usuario _usuario;
 
 
-    public VisualizacionReservas(Laboratorio laboratorio, INavigation navigation)
+    public VisualizacionReservas(Laboratorio laboratorio, Usuario usuario, INavigation navigation)
     {
+        _usuario = usuario;
         _navigation = navigation;
         const int desfase = 0;
         _labseleccionado = laboratorio;
@@ -405,8 +407,8 @@ public partial class VisualizacionReservas : ContentPage
         }
 
         List<DateTime> InicioyFin = new List<DateTime>();
-        InicioyFin.Add(new DateTime(fechaActual.Year, mesInicio, diaInicio));
-        InicioyFin.Add(new DateTime(fechaActual.Year, mesFin, diaFin));
+        InicioyFin.Add(new DateTime(fechaActual.Year, mesInicio, diaInicio +1));
+        InicioyFin.Add(new DateTime(fechaActual.Year, mesFin, diaFin + 1));
 
         return InicioyFin;
     }
@@ -454,7 +456,7 @@ public partial class VisualizacionReservas : ContentPage
         }
 
 
-        await Navigation.PushAsync(new EleccionReserva(new Usuario { boleta = 2022710161, password = "hardcoded" },
+        await Navigation.PushAsync(new EleccionReserva( _usuario,
             _labseleccionado, modulo, fechaDelBoton));
     }
 
@@ -465,7 +467,11 @@ public partial class VisualizacionReservas : ContentPage
         var loadingPage = new ModalCarga("Cargando disponibilidad de los módulos" +
                                          "\n\t      Un momento...");
 
+        
+
         this.ShowPopup(loadingPage);
+
+        await Task.Delay(1000);
 
         _reservacionesSemana = await obtenerReservacionesSemana.ObtenerReservacionesSemana(laboratorio, fecha);
 
@@ -515,7 +521,6 @@ public partial class VisualizacionReservas : ContentPage
             await Navigation.PopAsync();
 
         }
-
         //Se cierra el popup de carga
         modal.Close();
 

@@ -7,7 +7,7 @@
              CanBeDismissedByTappingOutsideOfPopup="False"
              Color="Transparent"
              HorizontalOptions="Center"
-             VerticalOptions="End"
+             VerticalOptions="Center"
              >
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <ActivityIndicator IsRunning="True" Color="Black" />

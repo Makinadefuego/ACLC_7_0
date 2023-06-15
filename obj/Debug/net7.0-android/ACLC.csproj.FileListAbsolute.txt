@@ -32,7 +32,6 @@ C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\dot
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\ipnlogo.png
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\fer.png
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\iniciar.png
-C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\ipnlogo.jpg
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\ipnlogo.png
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\lab1.png
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\lab2.png
@@ -1019,3 +1018,4 @@ C:\MauiProyects\ACLC\obj\Debug\net7.0-android\android\assets\ScrapySharp.dll
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\android\assets\tr\FSharp.Core.resources.dll
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\android\assets\zh-Hans\FSharp.Core.resources.dll
 C:\MauiProyects\ACLC\obj\Debug\net7.0-android\android\assets\zh-Hant\FSharp.Core.resources.dll
+C:\MauiProyects\ACLC\obj\Debug\net7.0-android\resizetizer\r\drawable\ipnlogo_cuadrado.jpg

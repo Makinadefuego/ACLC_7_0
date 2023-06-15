@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ACLC.Views.ValidacionBoleta">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry x:Name="Boleta" Placeholder="Ingresa tu boleta"></Entry>
+
+        <Label x:Name="BoletaValida" Text="No Váilida"/>
+
+        <Entry x:Name="Contrasenia"  Placeholder="Ingresa una contraseña" IsPassword="True" IsEnabled="False"/>
+
+        <Button x:Name="Accion" Text="Validar" Clicked="Validar_onClick"></Button>
+    </VerticalStackLayout>
+</ContentPage>

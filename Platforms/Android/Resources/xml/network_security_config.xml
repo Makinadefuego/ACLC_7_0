@@ -8,7 +8,7 @@
 		<domain includeSubdomains="true">621qdp8d-5148.usw3.devtunnels.ms </domain>
 		<domain includeSubdomains="true">servicios.dae.ipn.mx</domain>
 		<domain includeSubdomains="true">dae.ipn.mx</domain>
-
+		<domain includeSubdomains="true">lvg8ptnm-5148.usw3.devtunnels.ms</domain>
 		
 	</domain-config>
 </network-security-config>

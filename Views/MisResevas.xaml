@@ -1,0 +1,32 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ACLC.Models"
+             x:Class="ACLC.Views.MisReservas">
+    <ScrollView>
+        <StackLayout Margin="10">
+            <Label Text="Mis Reservaciones" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <CollectionView ItemsSource="{Binding Reservaciones}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding id}" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="{Binding Laboratorio.idLaboratorio}" Grid.Column="1" Grid.Row="0"></Label>
+                            <Label Text="{Binding Fecha}" FontSize="Large" FontAttributes="Bold" Grid.Column="2" Grid.Row="0" />
+                            
+                            <Button Text="Eliminar" FontSize="Large" Grid.Column="3" Grid.Row="0"  Clicked="Button_OnClicked"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

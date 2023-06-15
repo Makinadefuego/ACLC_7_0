@@ -11,7 +11,8 @@ public partial class RegistroQR : ContentPage
         InitializeComponent();
         CameraView.BarCodeOptions = new()
         {
-            PossibleFormats = { ZXing.BarcodeFormat.QR_CODE }
+            PossibleFormats = { ZXing.BarcodeFormat.QR_CODE},
+            TryHarder = true
         };
     }
 
@@ -34,7 +35,7 @@ public partial class RegistroQR : ContentPage
        MainThread.BeginInvokeOnMainThread(async () =>
        {
            await CameraView.StopCameraAsync();
-           info.Text = $"{args.Result[0].BarcodeFormat} : {args.Result[0].Text}";
+
 
            var url = args.Result[0].Text;
            url= url.Replace("www", "servicios");
@@ -45,10 +46,31 @@ public partial class RegistroQR : ContentPage
            var datosAlumno = _obtenerHtmlDatos.ObtenerDato(html, "#wrapper");
 
            //await DisplayAlert("Datos", $"Nombre: {nombre}\nBoleta: {boleta}\nEscuela: {escuela}\nVigencia: {vigencia}", "Ok");
-           await DisplayAlert("Datos", $"Nombre: {datosAlumno[3]}\nBoleta: {datosAlumno[4]}\nEscuela: {datosAlumno[6]}\nVigencia: {datosAlumno[7]}", "Ok");
+           //await DisplayAlert("Datos", $"Nombre: {datosAlumno[3]}\nBoleta: {datosAlumno[4]}\nEscuela: {datosAlumno[6]}\nVigencia: {datosAlumno[7]}", "Ok");
+           var boleta = int.Parse(datosAlumno[4]);
+           var cadenaVigencia = datosAlumno[7];
+           var escuela = datosAlumno[6];
 
-           
+
+           await Navigation.PushAsync(new ValidacionBoleta(boleta, cadenaVigencia, escuela, "Validar escaneo"));
+
+
+
 
        });
+    }
+
+    private async void IrValidar(object sender, EventArgs e)
+    {
+        if (CameraView.Cameras.Count > 0)
+        {
+            CameraView.Camera = CameraView.Cameras.First();
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await CameraView.StopCameraAsync();
+            });
+
+        }
+        await Navigation.PushAsync(new ValidacionBoleta(new int(), null, null, "Validar boleta"));
     }
 }

@@ -165,6 +165,8 @@ public partial class EleccionReserva : ContentPage
                 auxId++;
             }
 
+
+        modal.Close();
         //Content = VerticalLayout;
     }
 
@@ -172,8 +174,13 @@ public partial class EleccionReserva : ContentPage
     {
         IReservacionModulo reservarModulo = new ModuloReservacionServicio();
 
-        var reservacionExitosa =
-            await reservarModulo.ReservarModulo(_usuario.boleta, _modulo, _fecha, _laboratorio.idLaboratorio);
+        bool reservacionExitosa = false;
+
+        if (_usuario != null) 
+            if (_usuario.boleta != 0 && _usuario.password != null) {
+            
+                reservacionExitosa = await reservarModulo.ReservarModulo(_usuario.boleta, _modulo, _fecha, _laboratorio.idLaboratorio);
+            }
 
         var label = new Label
         {
@@ -205,7 +212,7 @@ public partial class EleccionReserva : ContentPage
 
             //Se crea la ventana modal de carga
             this.ShowPopup(modal);
-            await Task.Delay(TimeSpan.FromSeconds(1));
+            await Task.Delay(TimeSpan.FromSeconds(2));
             IObtenerModulo obtenerModulo = new ObtenerModuloServicio();
 
             var computadoras = await obtenerModulo.ObtenerModulo(_modulo, _laboratorio.idLaboratorio, _fecha);
@@ -235,7 +242,7 @@ public partial class EleccionReserva : ContentPage
 
             CrearComputadoras();
 
-            modal.Close();
+            
 
         }
         catch (Exception e)
@@ -280,8 +287,15 @@ public partial class EleccionReserva : ContentPage
         }
 
         IReservarComputadoras reservarComputadora = new ComputadorasReservacionServicio();
-        var reservacionExitosa = await reservarComputadora.ReservarComputadora(_computadorasSeleccionadas, _fecha,
-            _usuario, _modulo, _laboratorio.idLaboratorio);
+
+
+        bool reservacionExitosa = false;
+        if (_usuario != null )
+            if (_usuario.boleta != 0 && _usuario.password != null)
+            {
+                reservacionExitosa = await reservarComputadora.ReservarComputadora(_computadorasSeleccionadas, _fecha,
+                    _usuario, _modulo, _laboratorio.idLaboratorio);
+            }
 
 
         var label = new Label

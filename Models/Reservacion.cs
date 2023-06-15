@@ -7,5 +7,13 @@
         public int modulo { get; set; }
         public Usuario Usuario { get; set; }
         public Laboratorio Laboratorio { get; set; }
+
+        public string Fecha
+        {
+            get
+            {
+                return fecha.ToString("dd/MM/yyyy");
+            }
+        }
     }
 }

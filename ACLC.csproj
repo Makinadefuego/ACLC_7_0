@@ -50,8 +50,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\fer.png" />
 	  <None Remove="Resources\Images\iniciar.png" />
-	  <None Remove="Resources\Images\ipnlogo.jpg" />
 	  <None Remove="Resources\Images\ipnlogo.png" />
+	  <None Remove="Resources\Images\ipnlogo_cuadrado.jpg" />
 	  <None Remove="Resources\Images\lab1.png" />
 	  <None Remove="Resources\Images\lab2.png" />
 	  <None Remove="Resources\Images\pc.png" />
@@ -74,11 +74,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\MisResevas.xaml.cs">
+	    <DependentUpon>MisResevas.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\ModalCarga.xaml.cs">
 	    <DependentUpon>ModalCarga.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\RegistroQR.xaml.cs">
 	    <DependentUpon>RegistroQR.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ValidacionBoleta.xaml.cs">
+	    <DependentUpon>ValidacionBoleta.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -87,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\InicioSesion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MisResevas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ModalCarga.xaml">
