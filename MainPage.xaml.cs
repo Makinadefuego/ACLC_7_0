@@ -8,7 +8,12 @@ public partial class MainPage : ContentPage
     private Usuario _usuario;
     public MainPage()
     {
+        
+
         InitializeComponent();
+
+
+        ClearStack();
     }
 
     public MainPage(Usuario usuario)
@@ -16,8 +21,17 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         _usuario = usuario;
 
+        //Se limpia la pila de navegación
+
+
+        ClearStack();
 
         Iniciar.Text = $"Hola {_usuario.boleta}";
+    }
+
+    private  void ClearStack()
+    {
+        OnBackButtonPressed();
     }
 
     private async void IrInicioSesion(object sender, EventArgs e)
@@ -43,5 +57,10 @@ public partial class MainPage : ContentPage
     private async void IrMisReservaciones(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new MisReservas(_usuario));
+    }
+
+    protected override bool OnBackButtonPressed()
+    {
+        return true;
     }
 }

@@ -15,7 +15,7 @@ public partial class EleccionReserva : ContentPage
     private List<int> _reservadas;
 
 
-    private readonly Usuario _usuario;
+    private  Usuario _usuario;
 
     //Se crean elementos de la grilla de 9*4
     private readonly Grid _computadoras = new()
@@ -201,7 +201,26 @@ public partial class EleccionReserva : ContentPage
 
         _verticalLayout.Children.Add(label);
 
+
+
         Content = _verticalLayout;
+
+
+        //Espera 2 segundos para cerrar la ventana modal
+        await Task.Delay(TimeSpan.FromSeconds(2));
+
+
+        //Se crea una nueva instancia de la página principal
+        if (_usuario != null)
+        {
+            if (_usuario.boleta != 0 && _usuario.password != null)
+                await Navigation.PushAsync(new MainPage(usuario: _usuario));
+        }
+        else
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
     }
 
     public async void CargarComputadoras()
@@ -318,6 +337,29 @@ public partial class EleccionReserva : ContentPage
         _verticalLayout.Children.Add(label);
 
         Content = _verticalLayout;
+
+
+        //Espera 2 segundos para cerrar la ventana modal
+        await Task.Delay(TimeSpan.FromSeconds(2));
+
+        //Se regresa a la página principal después de una alerta
+
+
+
+
+        //Se crea una nueva instancia de la página principal
+        if (_usuario != null)
+        {
+            if (_usuario.boleta != 0 && _usuario.password != null)
+                await Navigation.PushAsync(new MainPage(usuario: _usuario));
+        }
+        else
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
+
+
     }
 
     private async void ReservarTodo_Clicked(object sender, EventArgs e)

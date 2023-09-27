@@ -24,7 +24,6 @@
         ],
         "originalTargetFrameworks": [
           "net7.0-android",
-          "net7.0-ios",
           "net7.0-maccatalyst",
           "net7.0-windows10.0.19041.0"
         ],
@@ -36,10 +35,6 @@
         "frameworks": {
           "net7.0-android33.0": {
             "targetAlias": "net7.0-android",
-            "projectReferences": {}
-          },
-          "net7.0-ios16.1": {
-            "targetAlias": "net7.0-ios",
             "projectReferences": {}
           },
           "net7.0-maccatalyst16.1": {
@@ -179,89 +174,6 @@
           "warn": true,
           "frameworkReferences": {
             "Microsoft.Android": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Controls": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Core": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Essentials": {
-              "privateAssets": "all"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-        },
-        "net7.0-ios16.1": {
-          "targetAlias": "net7.0-ios",
-          "dependencies": {
-            "Camera.MAUI": {
-              "target": "Package",
-              "version": "[1.4.3, )"
-            },
-            "CommunityToolkit.Maui": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
-            "HtmlAgilityPack": {
-              "target": "Package",
-              "version": "[1.11.46, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Maui.Graphics": {
-              "target": "Package",
-              "version": "[7.0.81, )",
-              "autoReferenced": true
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "ScrapySharp": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.iOS": {
               "privateAssets": "all"
             },
             "Microsoft.Maui.Controls": {
@@ -492,9 +404,6 @@
           "#import": []
         },
         "android-x86": {
-          "#import": []
-        },
-        "iossimulator-x64": {
           "#import": []
         },
         "maccatalyst-x64": {

@@ -5,6 +5,24 @@
     <ScrollView>
         <StackLayout Margin="10">
             <Label Text="Mis Reservaciones" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <!--Se crean los encabezados de la "tabla"-->
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="ID" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Fecha" FontSize="Large" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" />
+                <Label Text="Laboratorio" FontSize="Large"  FontAttributes="Bold"  Grid.Column="2" Grid.Row="0"></Label>
+                <Label Text="Modulo" FontSize="Large"  FontAttributes="Bold" Grid.Column="3" Grid.Row="0"/>
+
+            </Grid>
             <CollectionView ItemsSource="{Binding Reservaciones}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -14,15 +32,17 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Label Text="{Binding id}" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
-                            <Label Text="{Binding Laboratorio.idLaboratorio}" Grid.Column="1" Grid.Row="0"></Label>
-                            <Label Text="{Binding Fecha}" FontSize="Large" FontAttributes="Bold" Grid.Column="2" Grid.Row="0" />
-                            
-                            <Button Text="Eliminar" FontSize="Large" Grid.Column="3" Grid.Row="0"  Clicked="Button_OnClicked"/>
+                            <Label Text="{Binding Fecha}" FontSize="Large" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" />
+                            <Label Text="{Binding Laboratorio.idLaboratorio}" FontSize="Large"  FontAttributes="Bold"  Grid.Column="2" Grid.Row="0"></Label>
+                            <Label Text="{Binding modulo}" FontSize="Large"  FontAttributes="Bold" Grid.Column="3" Grid.Row="0"/>
+
+                            <Button Text="Eliminar" FontSize="Large" Grid.Column="4" Grid.Row="0"  Clicked="Button_OnClicked"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
